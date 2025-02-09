@@ -43,8 +43,11 @@ sub _cleanup {
 sub _init {
 	my ($self, $icon) = @_;
 
-	if (! defined $icon || ! blessed($icon) || ! $icon->isa('Data::Icon')) {
-		err 'Data object for icon is not valid.';
+	if (! defined $icon) {
+		err 'Icon object is required.';
+	}
+	if (! blessed($icon) || ! $icon->isa('Data::Icon')) {
+		err "Icon object must be a instance of 'Data::Icon'.";
 	}
 
 	$self->{'_icon'} = $icon;
