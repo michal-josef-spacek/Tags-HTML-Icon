@@ -6,6 +6,7 @@ use warnings;
 
 use Class::Utils qw(set_params split_params);
 use Error::Pure qw(err);
+use Mo::utils::CSS 0.02 qw(check_css_class);
 use Scalar::Util qw(blessed);
 
 our $VERSION = 0.01;
@@ -24,6 +25,8 @@ sub new {
 
 	# Process params.
 	set_params($self, @{$object_params_ar});
+
+	check_css_class($self, 'css_class');
 
 	# Object.
 	return $self;
