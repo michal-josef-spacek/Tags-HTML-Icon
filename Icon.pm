@@ -105,6 +105,10 @@ sub _process {
 sub _process_css {
 	my $self = shift;
 
+	if (! exists $self->{'_icon'}) {
+		return;
+	}
+
 	$self->{'css'}->put(
 		['s', '.'.$self->{'css_class'}],
 		# TODO
