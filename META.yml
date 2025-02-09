@@ -25,6 +25,7 @@ meta-spec:
 name: Tags-HTML-Icon
 no_index:
   directory:
+    - examples
     - inc
     - t
     - xt
