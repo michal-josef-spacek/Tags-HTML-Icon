@@ -110,9 +110,9 @@ sub _process_css {
 	}
 
 	$self->{'css'}->put(
-		['s', '.'.$self->{'css_class'}],
-		# TODO
-		['e'],
+		# ['s', '.'.$self->{'css_class'}],
+		# No default CSS code.
+		# ['e'],
 	);
 
 	return;

@@ -21,9 +21,7 @@ my $ret_ar = $css->flush(1);
 is_deeply(
 	$ret_ar,
 	[
-		['s', '.icon'],
-		# TODO
-		['e'],
+		# No default CSS.
 	],
 	'CSS struct code (icon).',
 );
