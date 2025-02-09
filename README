@@ -1,6 +1,12 @@
 NAME
     Tags::HTML::Icon - Tags helper for HTML icon.
 
+DESCRIPTION
+    Tags helper to print HTML code of icon defined by Data::Icon.
+
+    The HTML code contains icon defined by URL and alternate text (optional)
+    or by UTF-8 character with foregroun and backround colors (optional).
+
 SYNOPSIS
      use Tags::HTML::Icon;
 

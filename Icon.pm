@@ -130,6 +130,13 @@ __END__
 
 Tags::HTML::Icon - Tags helper for HTML icon.
 
+=head1 DESCRIPTION
+
+L<Tags> helper to print HTML code of icon defined by L<Data::Icon>.
+
+The HTML code contains icon defined by URL and alternate text (optional)
+or by UTF-8 character with foregroun and backround colors (optional).
+
 =head1 SYNOPSIS
 
  use Tags::HTML::Icon;
