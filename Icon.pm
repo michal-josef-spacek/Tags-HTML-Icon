@@ -71,13 +71,20 @@ sub _process {
 			['e', 'img'],
 		);
 	} else {
+		my @style;
+		if (defined $self->{'_icon'}->bg_color) {
+			push @style, 'background-color:'.$self->{'_icon'}->bg_color.';';
+		}
+		if (defined $self->{'_icon'}->color) {
+			push @style, 'color:'.$self->{'_icon'}->color.';';
+		}
 		$self->{'tags'}->put(
-			defined $self->{'_icon'}->color ? (
+			@style ? (
 				['b', 'span'],
-				['a', 'color', $self->{'_icon'}->color],
+				['a', 'style', (join '', @style)],
 			) : (),
 			['d', $self->{'_icon'}->char],
-			defined $self->{'_icon'}->color ? (
+			@style ? (
 				['e', 'span'],
 			) : (),
 		);
